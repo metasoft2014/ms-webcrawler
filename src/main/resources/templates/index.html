@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko" ng-app="mainApp">
+<head>
+	<!-- meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- title -->
+	<title>MS Web Crawler</title>
+	<!-- jquery 3.3.1 -->
+	<script type="text/javascript" src="/resources/lib/jquery/3.3.1/js/jquery.min.js"></script>
+	<!-- moment 2.21.0 -->
+	<script type="text/javascript" src="/resources/lib/moment/2.21.0/js/moment-with-locales.min.js"></script>
+	<!-- popper 1.12.9 -->
+	<script type="text/javascript" src="/resources/lib/popper/1.12.9/js/popper.min.js"></script>
+	<!-- bootstrap 4.0.0 -->
+	<link rel="stylesheet" type="text/css" href="/resources/lib/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="/resources/lib/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<!-- font-awesome 4.7.0 -->
+	<link rel="stylesheet" type="text/css" href="/resources/lib/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- angularjs 1.6.9 -->
+	<script type="text/javascript" src="/resources/lib/angularjs/1.6.9/js/angular.min.js"></script>
+	<script type="text/javascript" src="/resources/lib/angularjs/1.6.9/js/angular-route.min.js"></script>
+	<!-- stomp 1.7.1 -->
+	<script type="text/javascript" src="/resources/lib/stomp/1.7.1/js/stomp.min.js"></script>
+	<!-- sockjs 1.1.4 -->
+	<script type="text/javascript" src="/resources/lib/sockjs/1.1.4/js/sockjs.min.js"></script>
+	<!-- util -->
+	<script type="text/javascript" src="/resources/common/js/util/util.js"></script>
+</head>
+<body class="fixed-nav sticky-footer bg-dark" id="page-top" ng-controller="IndexCtrl">
+	<!-- nav -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+		<a class="navbar-brand" href="#!/">MS Web Crawler</a>
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav navbar-sidenav" id="mainSideNav">
+				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+					<a class="nav-link" href="#!/dashboard">
+						<i class="fa fa-fw fa-dashboard"></i>
+						<span class="nav-link-text">Dashboard</span>
+					</a>
+				</li>
+				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Websites">
+					<a class="nav-link" href="#!/websites">
+						<i class="fa fa-fw fa-sitemap"></i>
+						<span class="nav-link-text">Websites</span>
+					</a>
+				</li>
+				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Crawlers">
+					<a class="nav-link" href="#!/crawlers">
+						<i class="fa fa-fw fa-cogs"></i>
+						<span class="nav-link-text">Crawlers</span>
+					</a>
+				</li>
+<!-- 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Schedules"> -->
+<!-- 					<a class="nav-link" href="#!/schedules"> -->
+<!-- 						<i class="fa fa-fw fa-calendar"></i> -->
+<!-- 						<span class="nav-link-text">Schedules</span> -->
+<!-- 					</a> -->
+<!-- 				</li> -->
+				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Analyzers">
+					<a class="nav-link" href="#!/analyzers">
+						<i class="fa fa-fw fa-database"></i>
+						<span class="nav-link-text">Analyzers</span>
+					</a>
+				</li>
+				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Info">
+					<a class="nav-link" href="#!/my-info">
+						<i class="fa fa-fw fa-user"></i>
+						<span class="nav-link-text">My Info</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav sidenav-toggler">
+				<li class="nav-item">
+					<a class="nav-link text-center" id="sidenavToggler">
+						<i class="fa fa-fw fa-angle-left"></i>
+					</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#!/my-info">
+						<i class="fa fa-fw fa-user"></i>
+						<span ng-bind="firstName"></span>
+						<span ng-bind="lastName"></span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/logout">
+						<i class="fa fa-fw fa-sign-out"></i>
+						<span>Logout</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- view -->
+	<ng-view></ng-view>
+	<!-- footer -->
+	<footer class="sticky-footer">
+		<div class="container">
+			<div class="text-center">
+				<small>Copyright © Metasoft 2018</small>
+			</div>
+		</div>
+	</footer>
+	<!-- sb-admin 1.0.0 -->
+	<link rel="stylesheet" type="text/css" href="/resources/lib/sb-admin/1.0.0/css/sb-admin.min.css">
+	<script type="text/javascript" src="/resources/lib/sb-admin/1.0.0/js/sb-admin.min.js"></script>
+	<!-- dashboard -->
+	<script type="text/javascript" src="/resources/scripts/dashboard.js"></script>
+	<!-- my-info -->
+	<script type="text/javascript" src="/resources/scripts/my-info.js"></script>
+	<!-- website -->
+	<script type="text/javascript" src="/resources/scripts/website/website-list.js"></script>
+	<script type="text/javascript" src="/resources/scripts/website/website-form.js"></script>
+	<!-- crawler -->
+	<script type="text/javascript" src="/resources/scripts/crawler/crawler-list.js"></script>
+	<script type="text/javascript" src="/resources/scripts/crawler/crawler-form.js"></script>
+	<!-- schedule -->
+	<script type="text/javascript" src="/resources/scripts/schedule/schedule-list.js"></script>
+	<script type="text/javascript" src="/resources/scripts/schedule/schedule-form.js"></script>
+	<!-- schedule -->
+	<script type="text/javascript" src="/resources/scripts/analyzer/analyzer-list.js"></script>
+	<script type="text/javascript" src="/resources/scripts/analyzer/analyzer-form.js"></script>
+	<!-- index -->
+	<script type="text/javascript" src="/resources/scripts/index.js"></script>
+</body>
+</html>

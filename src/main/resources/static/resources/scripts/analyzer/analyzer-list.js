@@ -1,0 +1,3 @@
+var AnalyzerListCtrl = function ($scope) {
+
+};

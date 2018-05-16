@@ -1,0 +1,61 @@
+<div class="content-wrapper" ng-controller="CrawlerListCtrl">
+	<div class="container-fluid">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#!/">MS Web Crawler</a></li>
+			<li class="breadcrumb-item active">Crawlers</li>
+		</ol>
+		<h1><i class="fa fa-cogs"></i> Crawlers</h1>
+		<hr>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<span>Crawler List</span>
+					</div>
+					<div class="card-body">
+						<div class="clearfix" style="padding: 0 0 15px 0;">
+							<div class="float-left">
+								<span>Total Elements : {{ totalElements }}</span>
+							</div>
+							<div class="btn-group float-right">
+								<a class="btn btn-primary" href="#!/crawlers/new">New</a>
+								<button name="delete" class="btn btn-danger" type="button">Delete</button>
+							</div>
+						</div>
+						<div class="table-responsive">
+							<table class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th><input name="crawlerIdAll" type="checkbox"></th>
+										<th>Crawler Name</th>
+										<th>Target Url</th>
+										<th>Created Date</th>
+										<th>Updated Date</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="c in content">
+										<td><input name="crawlerId" type="checkbox" value="{{ c.crawlerId }}"></td>
+										<td><a href="#!/crawlers/{{ c.crawlerId }}/edit">{{ c.crawlerName }}</a></td>
+										<td>{{ c.targetUrl }}</td>
+										<td>{{ c.createdDate }}</td>
+										<td>{{ c.updatedDate }}</td>
+									</tr>
+									<tr ng-hide="hasElements">
+										<td colspan="5" class="text-center">No results found</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<ul class="pagination justify-content-center">
+							<li class="page-item" ng-hide="hasPrevious"><a class="page-link" href="#!/crawlers?page={{ previous }}">Previous</a></li>
+							<li class="page-item" ng-repeat="page in pages" ng-class="{active: page.active}"><a class="page-link" href="#!/crawlers?page={{ (page.number - 1) }}">{{ page.number }}</a></li>
+							<li class="page-item" ng-hide="hasNext"><a class="page-link" href="#!/crawlers?page={{ next }}">Next</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+	</div>
+</div>

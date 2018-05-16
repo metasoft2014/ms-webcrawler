@@ -1,0 +1,50 @@
+<div class="content-wrapper" ng-controller="WebsiteFormCtrl">
+	<div class="container-fluid">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#!/">MS Web Crawler</a></li>
+			<li class="breadcrumb-item"><a href="#!/websites">Websites</a></li>
+			<li class="breadcrumb-item active">Website Form</li>
+		</ol>
+		<h1><i class="fa fa-sitemap"></i> Website Form</h1>
+		<hr>
+		<div class="row">
+			<div class="col-md-12">
+				<form name="websiteForm">
+					<input name="websiteId" type="hidden" ng-model="websiteId">
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Website Name</label>
+						<div class="col-sm-10">
+							<input name="websiteName" class="form-control" type="text" ng-model="websiteName">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Website Domain Name</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text">http:// or https://</span>
+								</div>
+								<input name="websiteDomainName" class="form-control" type="text" ng-model="websiteDomainName">
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Created Date</label>
+						<div class="col-sm-10">
+							<input name="createdDate" class="form-control" type="text" disabled="disabled" ng-model="createdDate">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Updated Date</label>
+						<div class="col-sm-10">
+							<input name="updatedDate" class="form-control" type="text" disabled="disabled" ng-model="updatedDate">
+						</div>
+					</div>
+					<button name="save" class="btn btn-primary" type="button">Save</button>
+					<button name="delete" class="btn btn-danger" type="button" ng-show="hasId">Delete</button>
+				</form>
+			</div>
+		</div>
+		<hr>
+	</div>
+</div>

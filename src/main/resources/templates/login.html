@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" ng-app="mainApp">
+<head>
+	<!-- meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- title -->
+	<title>MS Web Crawler - Login</title>
+	<!-- jquery 3.3.1 -->
+	<script type="text/javascript" src="/resources/lib/jquery/3.3.1/js/jquery.min.js"></script>
+	<!-- popper 1.12.9 -->
+	<script type="text/javascript" src="/resources/lib/popper/1.12.9/js/popper.min.js"></script>
+	<!-- bootstrap 4.0.0 -->
+	<link rel="stylesheet" type="text/css" href="/resources/lib/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="/resources/lib/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<!-- font-awesome 4.7.0 -->
+	<link rel="stylesheet" type="text/css" href="/resources/lib/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- angularjs 1.6.9 -->
+	<script type="text/javascript" src="/resources/lib/angularjs/1.6.9/js/angular.min.js"></script>
+	<script type="text/javascript" src="/resources/lib/angularjs/1.6.9/js/angular-cookies.min.js"></script>
+	<!-- util -->
+	<script type="text/javascript" src="/resources/common/js/util/util.js"></script>
+</head>
+<body class="bg-dark" ng-controller="LoginCtrl">
+	<div class="container">
+		<div class="card card-login mx-auto mt-5">
+			<div class="card-header">
+				<h4 class="text-center">MS Web Crawler</h4>
+				<h5 class="text-center">Login</h5>
+			</div>
+			<div class="card-body">
+				<form>
+					<div class="form-group">
+						<label for="userName">User Name</label>
+						<input name="userName" id="userName" class="form-control" type="text" placeholder="User Name" ng-model="userName">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input name="password" id="password" class="form-control" type="password" placeholder="Password" ng-model="password">
+					</div>
+					<div class="form-group">
+						<div class="form-check">
+							<label class="form-check-label">
+							<input name="rememberUserName" class="form-check-input" type="checkbox" ng-checked="rememberUserName"> Remember User Name</label>
+						</div>
+					</div>
+					<button name="login" class="btn btn-primary btn-block" type="button">Login</button>
+				</form>
+				<div class="text-center">
+					<a class="d-block small mt-3" href="/register">Register an Account</a>
+<!-- 					<a class="d-block small" href="/forgot-password">Forgot Password?</a> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- sb-admin 1.0.0 -->
+	<link rel="stylesheet" type="text/css" href="/resources/lib/sb-admin/1.0.0/css/sb-admin.min.css">
+	<script type="text/javascript" src="/resources/lib/sb-admin/1.0.0/js/sb-admin.min.js"></script>
+	<!-- login -->
+	<script type="text/javascript" src="/resources/scripts/login.js"></script>
+</body>
+</html>

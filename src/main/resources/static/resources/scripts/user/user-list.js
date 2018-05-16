@@ -1,0 +1,3 @@
+var UserListCtrl = function ($scope) {
+
+};

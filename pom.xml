@@ -5,7 +5,7 @@
 
 	<groupId>kr.co.metasoft</groupId>
 	<artifactId>webcrawler</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>ms-webcrawler</name>

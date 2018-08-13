@@ -21,44 +21,44 @@
 
 [Instagram] (https://www.instagram.com/explore/tags/#keyword#/)
 	1. Action Set Data Key Attribute
-		- Selector : article > div:not(._21z45) div:not(.collected)._mck9w._gvoze._tn0ps > a
+		- Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a
 		- Attribute Name :
-		- Script : document.querySelector('article > div:not(._21z45) div:not(.collected)._mck9w._gvoze._tn0ps > a').setAttribute('data-key', document.querySelector('article > div:not(._21z45) div:not(.collected)._mck9w._gvoze._tn0ps > a').getAttribute('href').substring(3, document.querySelector('article > div:not(._21z45) div:not(.collected)._mck9w._gvoze._tn0ps > a').getAttribute('href').lastIndexOf('/')));
+		- Script : (function () { var cssSelector = 'article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a'; document.querySelector(cssSelector).setAttribute('data-key', document.querySelector(cssSelector).getAttribute('href').substring(3, document.querySelector(cssSelector).getAttribute('href').lastIndexOf('/'))); })();
 	2. Data Key
-		- Selector : article > div:not(._21z45) div:not(.collected)._mck9w._gvoze._tn0ps > a
+		- Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a
 		- Attribute Name : data-key
 		- Script :
 	3. Content
-		- Selector : article > div:not(._21z45) div:not(.collected)._mck9w._gvoze._tn0ps img
+		- Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w img
 		- Attribute Name : alt
 		- Script :
 	4. Action Click Open Modal
-		- Selector : article > div:not(._21z45) div:not(.collected)._mck9w._gvoze._tn0ps > a
-		- Script : document.querySelector('article > div:not(._21z45) div:not(.collected)._mck9w._gvoze._tn0ps > a').click();
+		- Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a
+		- Script : document.querySelector('article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a').click();
 	5. Writer
-		- Selector : article._622au._5lms4._4kplh div._eeohz > a
+		- Selector : a.FPmhX.nJAzx
 		- Attribute Name :
 		- Script :
 	6. Action Set Written Date Attribute
-		- Selector : article._622au._5lms4._4kplh time._p29ma._6g6t5
+		- Selector : time._1o9PC.Nzb55
 		- Attribute Name :
-		- Script : document.querySelector('article._622au._5lms4._4kplh time._p29ma._6g6t5').setAttribute('written-date', new Date(document.querySelector('article._622au._5lms4._4kplh time._p29ma._6g6t5').getAttribute('datetime')).getTime());
+		- Script : (function () { var cssSelector = 'time._1o9PC.Nzb55'; document.querySelector(cssSelector).setAttribute('written-date', new Date(document.querySelector(cssSelector).getAttribute('datetime')).getTime()); })();
 	7. Written Date
-		- Selector : article._622au._5lms4._4kplh time._p29ma._6g6t5
+		- Selector : time._1o9PC.Nzb55
 		- Attribute Name : written-date
 		- Script :
 	8. Action Click Close Modal
-		- Selector : button._dcj9f
+		- Selector : button.ckWGn
 		- Attribute Name :
-		- Script : document.querySelector('button._dcj9f').click();
+		- Script : document.querySelector('button.ckWGn').click();
 	9. Action Set Data Collected
-		- Selector : article > div:not(._21z45) div:not(.collected)._mck9w._gvoze._tn0ps
+		- Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w
 		- Attribute Name :
-		- Script : document.querySelector('article > div:not(._21z45) div:not(.collected)._mck9w._gvoze._tn0ps').className += ' collected';
+		- Script : document.querySelector('article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w').className += ' collected';
 	10. Action Scroll Down
-		- Selector : article > div:not(._21z45) div._mck9w._gvoze._tn0ps
+		- Selector : article > div:not(.EZdmt) div.v1Nh3.kIKUG._bz0w
 		- Attribute Name :
-		- Script : if (document.querySelectorAll('article > div:not(._21z45) div:not(.collected)._mck9w._gvoze._tn0ps').length <= 0) { scrollBy(0, window.document.body.scrollHeight); }
+		- Script : if (document.querySelectorAll('article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w').length <= 0) { scrollBy(0, window.document.body.scrollHeight); }
 
 [Twitter] (https://twitter.com/search?q=#keyword#)
 	1. Data Key
@@ -182,7 +182,7 @@
 	6. Action Set Content Attribute
 		- Selector : div#meta-contents
 		- Attribute Name :
-		- Script : document.querySelector('div#meta-contents').setAttribute('content', document.querySelector('div#meta-contents yt-formatted-string#description').innerText);
+		- Script : document.querySelector('div#meta-contents').setAttribute('content', document.querySelector('div#meta-contents div#description yt-formatted-string').innerText);
 	7. Content
 		- Selector : div#meta-contents
 		- Attribute Name : content

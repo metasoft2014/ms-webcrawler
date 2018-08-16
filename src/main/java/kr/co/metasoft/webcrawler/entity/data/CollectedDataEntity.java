@@ -14,25 +14,25 @@ import lombok.Data;
 @Table (name = "MS_COLLECTED_DATA")
 public class CollectedDataEntity {
 
-	@EmbeddedId
-	private CollectedDataEntityId collectedDataEntityId;
+    @EmbeddedId
+    private CollectedDataEntityId collectedDataEntityId;
 
-	@Column (name = "KEYWORD")
-	private String keyword;
+    @Column (name = "KEYWORD")
+    private String keyword;
 
-	@Column (name = "TITLE", length = 500)
-	private String title;
+    @Column (name = "TITLE", length = 500)
+    private String title;
 
-	@Column (name = "CONTENT", length = 5000)
-	private String content;
+    @Column (name = "CONTENT", length = 15000)
+    private String content;
 
-	@Column (name = "WRITER")
-	private String writer;
+    @Column (name = "WRITER")
+    private String writer;
 
-	@Column (name = "WRITTEN_DATE")
-	private Timestamp writtenDate;
+    @Column (name = "WRITTEN_DATE")
+    private Timestamp writtenDate;
 
-	@Column (name = "CREATED_DATE")
-	private Timestamp createdDate;
+    @Column (name = "CREATED_DATE")
+    private Timestamp createdDate;
 
 }

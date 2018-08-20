@@ -30,7 +30,7 @@
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top" ng-controller="IndexCtrl">
 	<!-- nav -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-purple fixed-top" id="mainNav" style="background-color: #2c332b">
 		<a class="navbar-brand" href="#!/">MS Web Crawler</a>
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -39,19 +39,22 @@
 			<ul class="navbar-nav navbar-sidenav" id="mainSideNav">
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
 					<a class="nav-link" href="#!/dashboard">
-						<i class="fa fa-fw fa-dashboard"></i>
+						<img src="/resources/img/Dashboard.png" width="17px"
+							style="height:17px; vertical-align: top; margin-top: 4px;">
 						<span class="nav-link-text">Dashboard</span>
 					</a>
 				</li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Websites">
 					<a class="nav-link" href="#!/websites">
-						<i class="fa fa-fw fa-sitemap"></i>
+						<img src="/resources/img/Websites.png" width="17px"
+							style="height:17px; vertical-align: top; margin-top: 4px;">
 						<span class="nav-link-text">Websites</span>
 					</a>
 				</li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Crawlers">
 					<a class="nav-link" href="#!/crawlers">
-						<i class="fa fa-fw fa-cogs"></i>
+						<img src="/resources/img/Crawlers.png" width="17px"
+							style="height:17px; vertical-align: top; margin-top: 4px;">
 						<span class="nav-link-text">Crawlers</span>
 					</a>
 				</li>
@@ -63,20 +66,24 @@
 <!-- 				</li> -->
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Analyzers">
 					<a class="nav-link" href="#!/analyzers">
-						<i class="fa fa-fw fa-database"></i>
-						<span class="nav-link-text">Analyzers</span>
+						<img src="/resources/img/Analyzers.png" width="17px"
+							style="height:17px; vertical-align: top; margin-top: 4px;">
+						<span class="nav-link-text">
+							Analyzers
+						</span>
 					</a>
 				</li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Info">
 					<a class="nav-link" href="#!/my-info">
-						<i class="fa fa-fw fa-user"></i>
+						<img src="/resources/img/My-Info.png" width="17px"
+							style="height:17px; vertical-align: top; margin-top: 4px;">
 						<span class="nav-link-text">My Info</span>
 					</a>
 				</li>
 			</ul>
 			<ul class="navbar-nav sidenav-toggler">
 				<li class="nav-item">
-					<a class="nav-link text-center" id="sidenavToggler">
+					<a class="nav-link text-center" id="sidenavToggler" style="background-color:#243b60;">
 						<i class="fa fa-fw fa-angle-left"></i>
 					</a>
 				</li>
@@ -84,14 +91,16 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
 					<a class="nav-link" href="#!/my-info">
-						<i class="fa fa-fw fa-user"></i>
+						<img src="/resources/img/My-Info.png" width="17px"
+							 style="height:17px; vertical-align: top; margin-top: 4px;">
 						<span ng-bind="firstName"></span>
 						<span ng-bind="lastName"></span>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/logout">
-						<i class="fa fa-fw fa-sign-out"></i>
+						<img src="/resources/img/logout.png" width="17px"
+							 style="height:17px; vertical-align: top; margin-top: 5px;">
 						<span>Logout</span>
 					</a>
 				</li>

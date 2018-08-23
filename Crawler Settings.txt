@@ -1,213 +1,213 @@
 [Maria DB Setting]
-	1. my.ini
-		[mysql]
-		default-character-set=utf8mb4
+    1. my.ini
+        [mysql]
+        default-character-set=utf8mb4
 
-		[mysqld]
-		datadir=D:/Development/Databases/MariaDB/10.2.13/data
-		port=3306
-		innodb_buffer_pool_size=1011M
-		character-set-client-handshake=FALSE
-		character-set-server=utf8mb4
-		collation-server=utf8mb4_unicode_ci
+        [mysqld]
+        datadir=D:/Development/Databases/MariaDB/10.2.13/data
+        port=3306
+        innodb_buffer_pool_size=1011M
+        character-set-client-handshake=FALSE
+        character-set-server=utf8mb4
+        collation-server=utf8mb4_unicode_ci
 
-		[client]
-		default-character-set=utf8mb4
-		port=3306
-		plugin-dir=C:/Program Files/MariaDB/10.2.13/lib/plugin
-	2. Schema
-		ALTER DATABASE database_name CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
-		ALTER TABLE table_name CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+        [client]
+        default-character-set=utf8mb4
+        port=3306
+        plugin-dir=C:/Program Files/MariaDB/10.2.13/lib/plugin
+    2. Schema
+        ALTER DATABASE database_name CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+        ALTER TABLE table_name CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 [Instagram] (https://www.instagram.com/explore/tags/#keyword#/)
-	1. Action Set Data Key Attribute
-		- Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a
-		- Attribute Name :
-		- Script : (function () { var cssSelector = 'article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a'; document.querySelector(cssSelector).setAttribute('data-key', document.querySelector(cssSelector).getAttribute('href').substring(3, document.querySelector(cssSelector).getAttribute('href').lastIndexOf('/'))); })();
-	2. Data Key
-		- Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a
-		- Attribute Name : data-key
-		- Script :
-	3. Content
-		- Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w img
-		- Attribute Name : alt
-		- Script :
-	4. Action Click Open Modal
-		- Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a
-		- Script : document.querySelector('article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a').click();
-	5. Writer
-		- Selector : a.FPmhX.nJAzx
-		- Attribute Name :
-		- Script :
-	6. Action Set Written Date Attribute
-		- Selector : time._1o9PC.Nzb55
-		- Attribute Name :
-		- Script : (function () { var cssSelector = 'time._1o9PC.Nzb55'; document.querySelector(cssSelector).setAttribute('written-date', new Date(document.querySelector(cssSelector).getAttribute('datetime')).getTime()); })();
-	7. Written Date
-		- Selector : time._1o9PC.Nzb55
-		- Attribute Name : written-date
-		- Script :
-	8. Action Click Close Modal
-		- Selector : button.ckWGn
-		- Attribute Name :
-		- Script : document.querySelector('button.ckWGn').click();
-	9. Action Set Data Collected
-		- Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w
-		- Attribute Name :
-		- Script : document.querySelector('article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w').className += ' collected';
-	10. Action Scroll Down
-		- Selector : article > div:not(.EZdmt) div.v1Nh3.kIKUG._bz0w
-		- Attribute Name :
-		- Script : if (document.querySelectorAll('article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w').length <= 0) { scrollBy(0, window.document.body.scrollHeight); }
+    1. Action Set Data Key Attribute
+        - Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a
+        - Attribute Name :
+        - Script : (function () { var cssSelector = 'article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a'; document.querySelector(cssSelector).setAttribute('data-key', document.querySelector(cssSelector).getAttribute('href').substring(3, document.querySelector(cssSelector).getAttribute('href').lastIndexOf('/'))); })();
+    2. Data Key
+        - Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a
+        - Attribute Name : data-key
+        - Script :
+    3. Action Click Open Modal
+        - Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a
+        - Script : document.querySelector('article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w > a').click();
+    4. Content
+        - Selector : ul.k59kT
+        - Attribute Name :
+        - Script :
+    5. Writer
+        - Selector : a.FPmhX.nJAzx
+        - Attribute Name :
+        - Script :
+    6. Action Set Written Date Attribute
+        - Selector : time._1o9PC.Nzb55
+        - Attribute Name :
+        - Script : (function () { var cssSelector = 'time._1o9PC.Nzb55'; document.querySelector(cssSelector).setAttribute('written-date', new Date(document.querySelector(cssSelector).getAttribute('datetime')).getTime()); })();
+    7. Written Date
+        - Selector : time._1o9PC.Nzb55
+        - Attribute Name : written-date
+        - Script :
+    8. Action Click Close Modal
+        - Selector : button.ckWGn
+        - Attribute Name :
+        - Script : document.querySelector('button.ckWGn').click();
+    9. Action Set Data Collected
+        - Selector : article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w
+        - Attribute Name :
+        - Script : document.querySelector('article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w').className += ' collected';
+    10. Action Scroll Down
+        - Selector : article > div:not(.EZdmt) div.v1Nh3.kIKUG._bz0w
+        - Attribute Name :
+        - Script : if (document.querySelectorAll('article > div:not(.EZdmt) div:not(.collected).v1Nh3.kIKUG._bz0w').length <= 0) { scrollBy(0, window.document.body.scrollHeight); }
 
 [Twitter] (https://twitter.com/search?q=#keyword#)
-	1. Data Key
-		- Selector : div:not(.collected).tweet
-		- Attribute Name : data-tweet-id
-		- Script :
-	2. Content
-		- Selector : div:not(.collected).tweet p.TweetTextSize.js-tweet-text.tweet-text
-		- Attribute Name :
-		- Script :
-	3. Action Set Writer Attribute
-		- Selector : div:not(.collected).tweet span.username.u-dir.u-textTruncate
-		- Attribute Name :
-		- Script : document.querySelector('div:not(.collected).tweet span.username.u-dir.u-textTruncate').setAttribute('writer', document.querySelector('div:not(.collected).tweet span.username.u-dir.u-textTruncate > b').innerText);
-	4. Writer
-		- Selector : div:not(.collected).tweet span.username.u-dir.u-textTruncate
-		- Attribute Name : writer
-		- Script :
-	5. Written Date
-		- Selector : div:not(.collected).tweet span._timestamp.js-short-timestamp
-		- Attribute Name : data-time-ms
-		- Script :
-	6. Action Set Data Collected
-		- Selector : div:not(.collected).tweet
-		- Attribute Name :
-		- Script : document.querySelector('div:not(.collected).tweet').className += 'collected';
-	7. Action Scroll Down
-		- Selector : div.tweet
-		- Attribute Name :
-		- Script : if (document.querySelectorAll('div:not(.collected).tweet').length <= 0) { scrollBy(0, window.document.body.scrollHeight); }
+    1. Data Key
+        - Selector : div:not(.collected).tweet
+        - Attribute Name : data-tweet-id
+        - Script :
+    2. Content
+        - Selector : div:not(.collected).tweet p.TweetTextSize.js-tweet-text.tweet-text
+        - Attribute Name :
+        - Script :
+    3. Action Set Writer Attribute
+        - Selector : div:not(.collected).tweet span.username.u-dir.u-textTruncate
+        - Attribute Name :
+        - Script : document.querySelector('div:not(.collected).tweet span.username.u-dir.u-textTruncate').setAttribute('writer', document.querySelector('div:not(.collected).tweet span.username.u-dir.u-textTruncate > b').innerText);
+    4. Writer
+        - Selector : div:not(.collected).tweet span.username.u-dir.u-textTruncate
+        - Attribute Name : writer
+        - Script :
+    5. Written Date
+        - Selector : div:not(.collected).tweet span._timestamp.js-short-timestamp
+        - Attribute Name : data-time-ms
+        - Script :
+    6. Action Set Data Collected
+        - Selector : div:not(.collected).tweet
+        - Attribute Name :
+        - Script : document.querySelector('div:not(.collected).tweet').className += 'collected';
+    7. Action Scroll Down
+        - Selector : div.tweet
+        - Attribute Name :
+        - Script : if (document.querySelectorAll('div:not(.collected).tweet').length <= 0) { scrollBy(0, window.document.body.scrollHeight); }
 
 [Kakao Story] (https://story.kakao.com/hashtag/#keyword#)
-	1. Data Key
-		- Selector : div:not(.collected).img_item
-		- Attribute Name : data-model
-		- Script :
-	2. Action Click Open Modal
-		- Selector : div:not(.collected).img_item a
-		- Attribute Name :
-		- Script : document.querySelector('div:not(.collected).img_item a').click();
-	3. Content
-		- Selector : div#cover div._activityBody div._content
-		- Attribute Name :
-		- Script :
-	4. Writer
-		- Selector : div#cover div._activityBody a.pf_name
-		- Attribute Name :
-		- Script :
-	5. Action Set Written Date Attribute
-		- Selector : div#cover div._activityBody span.time
-		- Attribute Name : data-tooltip
-		- Script : (function () { var str, year, month, day, hours, minutes, time; str = document.querySelector('div._activityBody span.time').getAttribute('title'); year = Number(str.substring(0, str.indexOf('년')).trim()); month = Number(str.substring(str.indexOf('년') + 1, str.indexOf('월')).trim()); day = Number(str.substring(str.indexOf('월') + 1, str.indexOf('일')).trim()); if (str.indexOf('오전') > -1) { hours = Number(str.substring(str.indexOf('오전') + 2, str.indexOf(':')).trim()); } else if (str.indexOf('오후') > -1) { hours = Number(str.substring(str.indexOf('오후') + 2, str.indexOf(':')).trim()) + 12; } minutes = Number(str.substring(str.indexOf(':') + 1).trim()); time = new Date(year, month - 1, day, hours, minutes, 0, 0).getTime(); document.querySelector('div._activityBody span.time').setAttribute('written-date', time); })()
-	6. Written Date
-		- Selector : div#cover div._activityBody span.time
-		- Attribute Name : written-date
-		- Script :
-	7. Action Click Close Modal
-		- Selector : button._btnClose
-		- Attribute Name :
-		- Script : document.querySelector('button._btnClose').click();
-	8. Action Set Data Collected
-		- Selector : div:not(.collected).img_item
-		- Attribute Name :
-		- Script : document.querySelector('div:not(.collected).img_item').className += ' collected';
-	9. Action Scroll Down
-		- Selector : div.img_item
-		- Attribute Name :
-		- Script : if (document.querySelectorAll('div:not(.collected).img_item').length <= 0) { scrollBy(0, window.document.body.scrollHeight); }
+    1. Data Key
+        - Selector : div:not(.collected).img_item
+        - Attribute Name : data-model
+        - Script :
+    2. Action Click Open Modal
+        - Selector : div:not(.collected).img_item a
+        - Attribute Name :
+        - Script : document.querySelector('div:not(.collected).img_item a').click();
+    3. Content
+        - Selector : div#cover div._activityBody div._content
+        - Attribute Name :
+        - Script :
+    4. Writer
+        - Selector : div#cover div._activityBody a.pf_name
+        - Attribute Name :
+        - Script :
+    5. Action Set Written Date Attribute
+        - Selector : div#cover div._activityBody span.time
+        - Attribute Name : data-tooltip
+        - Script : (function () { var str, year, month, day, hours, minutes, time; str = document.querySelector('div._activityBody span.time').getAttribute('title'); year = Number(str.substring(0, str.indexOf('년')).trim()); month = Number(str.substring(str.indexOf('년') + 1, str.indexOf('월')).trim()); day = Number(str.substring(str.indexOf('월') + 1, str.indexOf('일')).trim()); if (str.indexOf('오전') > -1) { hours = Number(str.substring(str.indexOf('오전') + 2, str.indexOf(':')).trim()); } else if (str.indexOf('오후') > -1) { hours = Number(str.substring(str.indexOf('오후') + 2, str.indexOf(':')).trim()) + 12; } minutes = Number(str.substring(str.indexOf(':') + 1).trim()); time = new Date(year, month - 1, day, hours, minutes, 0, 0).getTime(); document.querySelector('div._activityBody span.time').setAttribute('written-date', time); })()
+    6. Written Date
+        - Selector : div#cover div._activityBody span.time
+        - Attribute Name : written-date
+        - Script :
+    7. Action Click Close Modal
+        - Selector : button._btnClose
+        - Attribute Name :
+        - Script : document.querySelector('button._btnClose').click();
+    8. Action Set Data Collected
+        - Selector : div:not(.collected).img_item
+        - Attribute Name :
+        - Script : document.querySelector('div:not(.collected).img_item').className += ' collected';
+    9. Action Scroll Down
+        - Selector : div.img_item
+        - Attribute Name :
+        - Script : if (document.querySelectorAll('div:not(.collected).img_item').length <= 0) { scrollBy(0, window.document.body.scrollHeight); }
 
 [Tumblr] (https://www.tumblr.com/search/#keyword#)
-	1. Data Key
-		- Selector : div#search_posts > article:not(.collected)
-		- Attribute Name : data-id
-		- Script :
-	2. Action Click Expand Post Content
-		- Selector : div#search_posts > article:not(.collected)
-		- Attribute Name :
-		- Script : (function () { var dataId = document.querySelector('div#search_posts > article:not(.collected)').getAttribute('data-id'), expandPostContent = document.querySelector('div#search_posts > article:not(.collected)[data-id="' + dataId + '"] div.expand-post-content'); if (expandPostContent != null) { expandPostContent.click(); } })();
-	3. Action Set Content Attribute
-		- Selector : div#search_posts > article:not(.collected) section.post_content
-		- Attribute Name :
-		- Script : (function () { var postContent = document.querySelector('div#search_posts > article:not(.collected) section.post_content'), postBody = document.querySelector('div#search_posts > article:not(.collected) div.post_body'), content = ''; if (postBody != null) { content = postBody.innerText; } postContent.setAttribute('content', content); })();
-	4. Content
-		- Selector : div#search_posts > article:not(.collected) section.post_content
-		- Attribute Name : content
-		- Script :
-	5. Writer
-		- Selector : div#search_posts > article:not(.collected) div.post-info-tumblelog a
-		- Attribute Name :
-		- Script :
-	6. Action Set Data Collected
-		- Selector : div#search_posts > article:not(.collected)
-		- Attribute Name :
-		- Script : document.querySelector('div#search_posts > article:not(.collected)').className += ' collected';
-	7. Action Scroll Down
-		- Selector : div#search_posts > article
-		- Attribute Name :
-		- Script : if (document.querySelectorAll('div#search_posts > article:not(.collected)').length <= 0) { scrollBy(0, window.document.body.scrollHeight); }
+    1. Data Key
+        - Selector : div#search_posts > article:not(.collected)
+        - Attribute Name : data-id
+        - Script :
+    2. Action Click Expand Post Content
+        - Selector : div#search_posts > article:not(.collected)
+        - Attribute Name :
+        - Script : (function () { var dataId = document.querySelector('div#search_posts > article:not(.collected)').getAttribute('data-id'), expandPostContent = document.querySelector('div#search_posts > article:not(.collected)[data-id="' + dataId + '"] div.expand-post-content'); if (expandPostContent != null) { expandPostContent.click(); } })();
+    3. Action Set Content Attribute
+        - Selector : div#search_posts > article:not(.collected) section.post_content
+        - Attribute Name :
+        - Script : (function () { var postContent = document.querySelector('div#search_posts > article:not(.collected) section.post_content'), postBody = document.querySelector('div#search_posts > article:not(.collected) div.post_body'), content = ''; if (postBody != null) { content = postBody.innerText; } postContent.setAttribute('content', content); })();
+    4. Content
+        - Selector : div#search_posts > article:not(.collected) section.post_content
+        - Attribute Name : content
+        - Script :
+    5. Writer
+        - Selector : div#search_posts > article:not(.collected) div.post-info-tumblelog a
+        - Attribute Name :
+        - Script :
+    6. Action Set Data Collected
+        - Selector : div#search_posts > article:not(.collected)
+        - Attribute Name :
+        - Script : document.querySelector('div#search_posts > article:not(.collected)').className += ' collected';
+    7. Action Scroll Down
+        - Selector : div#search_posts > article
+        - Attribute Name :
+        - Script : if (document.querySelectorAll('div#search_posts > article:not(.collected)').length <= 0) { scrollBy(0, window.document.body.scrollHeight); }
 
 [YouTube] (https://www.youtube.com/results?search_query=#keyword#)
-	1. Action Set Data Key Attribute
-		- Selector : div#contents > ytd-video-renderer:not(.collected) > div#dismissable > ytd-thumbnail > a#thumbnail
-		- Attribute Name :
-		- Script : document.querySelector('div#contents > ytd-video-renderer:not(.collected) > div#dismissable > ytd-thumbnail > a#thumbnail').setAttribute('data-key', document.querySelector('div#contents > ytd-video-renderer:not(.collected) > div#dismissable > ytd-thumbnail > a#thumbnail').getAttribute('href').substring(9));
-	2. Data Key
-		- Selector : div#contents > ytd-video-renderer:not(.collected) > div#dismissable > ytd-thumbnail > a#thumbnail
-		- Attribute Name : data-key
-		- Script :
-	3. Title
-		- Selector : div#contents > ytd-video-renderer:not(.collected) > div#dismissable > div > div#meta > div#title-wrapper > h3 > a#video-title
-		- Attribute Name :
-		- Script :
-	4. Action Click Show Content
-		- Selector : div#contents > ytd-video-renderer:not(.collected) > div#dismissable > ytd-thumbnail > a#thumbnail
-		- Attribute Name :
-		- Script : document.querySelector('div#contents > ytd-video-renderer:not(.collected) > div#dismissable > ytd-thumbnail > a#thumbnail').click();
-	5. Action Click More Button
-		- Selector : div#meta-contents
-		- Attribute Name :
-		- Script : if (document.querySelectorAll('div#meta-contents yt-formatted-string.more-button').length > 0) { document.querySelector('div#meta-contents yt-formatted-string.more-button').click(); }
-	6. Action Set Content Attribute
-		- Selector : div#meta-contents
-		- Attribute Name :
-		- Script : document.querySelector('div#meta-contents').setAttribute('content', document.querySelector('div#meta-contents div#description yt-formatted-string').innerText);
-	7. Content
-		- Selector : div#meta-contents
-		- Attribute Name : content
-		- Script :
-	8. Writer
-		- Selector : div#meta-contents yt-formatted-string#owner-name > a
-		- Attribute Name :
-		- Script :
-	9. Action Set Written Date Attribute
-		- Selector : div#meta-contents span.date
-		- Attribute Name :
-		- Script : (function () { var tempDate = document.querySelector('div#meta-contents span.date').innerText, tempYear = undefined, tempMonth = undefined, tempDay = undefined; tempDate = tempDate.substring(tempDate.indexOf(':') + 2); tempDate = tempDate.replace(/\s/gi, ''); tempYear = Number(tempDate.substring(0, tempDate.indexOf('.'))); tempDate = tempDate.substring(tempDate.indexOf('.') + 1); tempMonth = Number(tempDate.substring(0, tempDate.indexOf('.'))); tempDate = tempDate.substring(tempDate.indexOf('.') + 1); tempDay = Number(tempDate.substring(0, tempDate.indexOf('.'))); tempDate = new Date(tempYear, tempMonth - 1, tempDay, 0, 0, 0, 0); document.querySelector('div#meta-contents span.date').setAttribute('written-date', tempDate.getTime()); })();
-	10. Written Date
-		- Selector : div#meta-contents span.date
-		- Attribute Name : written-date
-		- Script :
-	11. Action Go History Back
-		- Selector :
-		- Attribute Name :
-		- Script : history.back();
-	12. Action Set Data Collected
-		- Selector : div#contents > ytd-video-renderer:not(.collected)
-		- Attribute Name :
-		- Script : document.querySelector('div#contents > ytd-video-renderer:not(.collected)').className += ' collected';
-	13. Action Scroll Down
-		- Selector : div#contents > ytd-video-renderer
-		- Attribute Name :
-		- Script : if (document.querySelectorAll('div#contents > ytd-video-renderer:not(.collected)').length <= 0) { scrollBy(0, document.querySelector('ytd-app').scrollHeight); }
+    1. Action Set Data Key Attribute
+        - Selector : div#contents > ytd-video-renderer:not(.collected) > div#dismissable > ytd-thumbnail > a#thumbnail
+        - Attribute Name :
+        - Script : document.querySelector('div#contents > ytd-video-renderer:not(.collected) > div#dismissable > ytd-thumbnail > a#thumbnail').setAttribute('data-key', document.querySelector('div#contents > ytd-video-renderer:not(.collected) > div#dismissable > ytd-thumbnail > a#thumbnail').getAttribute('href').substring(9));
+    2. Data Key
+        - Selector : div#contents > ytd-video-renderer:not(.collected) > div#dismissable > ytd-thumbnail > a#thumbnail
+        - Attribute Name : data-key
+        - Script :
+    3. Title
+        - Selector : div#contents > ytd-video-renderer:not(.collected) > div#dismissable > div > div#meta > div#title-wrapper > h3 > a#video-title
+        - Attribute Name :
+        - Script :
+    4. Action Click Show Content
+        - Selector : div#contents > ytd-video-renderer:not(.collected) > div#dismissable > ytd-thumbnail > a#thumbnail
+        - Attribute Name :
+        - Script : document.querySelector('div#contents > ytd-video-renderer:not(.collected) > div#dismissable > ytd-thumbnail > a#thumbnail').click();
+    5. Action Click More Button
+        - Selector : div#meta-contents
+        - Attribute Name :
+        - Script : if (document.querySelectorAll('div#meta-contents yt-formatted-string.more-button').length > 0) { document.querySelector('div#meta-contents yt-formatted-string.more-button').click(); }
+    6. Action Set Content Attribute
+        - Selector : div#meta-contents
+        - Attribute Name :
+        - Script : document.querySelector('div#meta-contents').setAttribute('content', document.querySelector('div#meta-contents div#description yt-formatted-string').innerText);
+    7. Content
+        - Selector : div#meta-contents
+        - Attribute Name : content
+        - Script :
+    8. Writer
+        - Selector : div#meta-contents yt-formatted-string#owner-name > a
+        - Attribute Name :
+        - Script :
+    9. Action Set Written Date Attribute
+        - Selector : div#meta-contents span.date
+        - Attribute Name :
+        - Script : (function () { var tempDate = document.querySelector('div#meta-contents span.date').innerText, tempYear = undefined, tempMonth = undefined, tempDay = undefined; tempDate = tempDate.substring(tempDate.indexOf(':') + 2); tempDate = tempDate.replace(/\s/gi, ''); tempYear = Number(tempDate.substring(0, tempDate.indexOf('.'))); tempDate = tempDate.substring(tempDate.indexOf('.') + 1); tempMonth = Number(tempDate.substring(0, tempDate.indexOf('.'))); tempDate = tempDate.substring(tempDate.indexOf('.') + 1); tempDay = Number(tempDate.substring(0, tempDate.indexOf('.'))); tempDate = new Date(tempYear, tempMonth - 1, tempDay, 0, 0, 0, 0); document.querySelector('div#meta-contents span.date').setAttribute('written-date', tempDate.getTime()); })();
+    10. Written Date
+        - Selector : div#meta-contents span.date
+        - Attribute Name : written-date
+        - Script :
+    11. Action Go History Back
+        - Selector :
+        - Attribute Name :
+        - Script : history.back();
+    12. Action Set Data Collected
+        - Selector : div#contents > ytd-video-renderer:not(.collected)
+        - Attribute Name :
+        - Script : document.querySelector('div#contents > ytd-video-renderer:not(.collected)').className += ' collected';
+    13. Action Scroll Down
+        - Selector : div#contents > ytd-video-renderer
+        - Attribute Name :
+        - Script : if (document.querySelectorAll('div#contents > ytd-video-renderer:not(.collected)').length <= 0) { scrollBy(0, document.querySelector('ytd-app').scrollHeight); }
